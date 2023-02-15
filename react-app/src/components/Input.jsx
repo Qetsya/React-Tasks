@@ -2,12 +2,11 @@ import "./Input.css";
 import { useState } from "react";
 
 const Input = (props) => {
-  const [state, setState] = useState();
+  const [state, setState] = useState("");
 
   const change = (event) => {
-    const value = event.target.value;
+    let value = event.target.value;
     setState(value);
-    console.log(value);
 
     if (props.onChange) {
       props.onChange(value);
